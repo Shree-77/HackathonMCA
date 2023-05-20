@@ -187,7 +187,10 @@ public class Login extends javax.swing.JFrame {
         {
             JOptionPane.showMessageDialog(this,"username/password should not be empty","ERROR", JOptionPane.ERROR_MESSAGE);
         }else{
-            userLogin(username,password);
+        	 ClickableImageMatrix cm=new  ClickableImageMatrix();
+        	 cm.setLocationRelativeTo(null);
+             cm.setTitle("Login");
+             cm.setVisible(true);
         }
     }//GEN-LAST:event_tfLoginBtnActionPerformed
 

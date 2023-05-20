@@ -1,5 +1,6 @@
 package Pages;
 
+
 import javax.swing.*;
 import java.awt.*;
 import java.awt.event.ActionEvent;
@@ -12,6 +13,8 @@ public class ClickableImageMatrix extends JFrame implements ActionListener {
     private List<ImageIcon> imageList;
     private List<JButton> imageButtons;
     private JButton submitButton;
+    Login l;
+    
     private ArrayList<Integer> selectedIndices;
 
     public ClickableImageMatrix() {
@@ -75,13 +78,17 @@ public class ClickableImageMatrix extends JFrame implements ActionListener {
 
                 // Check if three images are selected
                 if (selectedIndices.size() == 3) {
-                
+                	
                 	selectedIndices.clear();
                     submitButton.setEnabled(true); // Enable the submit button
                 }
             }
         } else if (source == submitButton) {
             // Handle the action for the submit button
+        	Login l=new Login();
+        	l.setLocationRelativeTo(null);
+            l.setTitle("Login");
+            l.setVisible(true);
             System.out.println("Submit button clicked.");
             // Navigate to the next page or perform the desired action
         }
